@@ -11,7 +11,7 @@ const Main: React.FC = () => {
 
             <p>Le site vous aidant à trouver les établissement public de l'ile de france </p>
 
-            <Image src="https://www.usinenouvelle.com/mediatheque/0/7/5/000353570_896x598_c.jpg" fluid thumbnail style={{width:"100%"}}/>
+            <Image className="mb-3" src="https://www.usinenouvelle.com/mediatheque/0/7/5/000353570_896x598_c.jpg" fluid thumbnail style={{width:"100%"}}/>
         </div>
      );
 }

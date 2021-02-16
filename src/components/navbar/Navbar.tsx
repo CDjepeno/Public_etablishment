@@ -4,10 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { LinkContainer } from 'react-router-bootstrap'
 
 
-// export interface PropNavbars {
-    
-// }
- 
+
 const NavbarMenu: React.FC = () => {
     return (<> 
         <Navbar bg="dark" expand="lg" variant="dark">
