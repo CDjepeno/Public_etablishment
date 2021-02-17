@@ -8,6 +8,7 @@ import NavbarMenu from './components/navbar/Navbar';
 import { Container } from 'react-bootstrap';
 import Error404 from './pages/errors/Error404';
 import Footer from './components/footer/Footer';
+import ContactForm from './pages/contact/ContactForm';
  
 const App: React.FC = () => {
     return ( 
@@ -16,8 +17,8 @@ const App: React.FC = () => {
             <Container>
                 <Switch>
                 <Route path="/" exact component={Main} /> 
-                <Route path="/localisation" exact component={Localiation} /> 
-                <Route path="/contact" exact component={Contact} /> 
+                <Route path="/localisation" exact component={Locali} /> 
+                <Route path="/contact" component={Contact} /> 
                 <Route component={Error404} /> 
                 </Switch>
             </Container>

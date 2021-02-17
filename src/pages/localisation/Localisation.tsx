@@ -1,13 +1,14 @@
 import React from 'react'
+import Title from '../../components/title/Title'
 
 
  
-const Localiation: React.FC = () => {
+const Localisation: React.FC = () => {
     return ( 
         <div>
-            Localisation
+            <Title text="Recherchr un établissement : " />
         </div>
      );
 }
  
-export default Localiation;
+export default Localisation;

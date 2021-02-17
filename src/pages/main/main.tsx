@@ -1,7 +1,6 @@
 import React from 'react'
 import Title from '../../components/title/Title'
 import Image from 'react-bootstrap/Image'
-import ImgMain from '../../assets/images/chateau.jpg'
 
 
 const Main: React.FC = () => {
