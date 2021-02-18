@@ -1,0 +1,1 @@
+export const API_ORGANIZATION = "https://etablissements-publics.api.gouv.fr/v3/departements/75/";

@@ -1,14 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom'
 import Contact from './pages/contact/Contact';
-import Localiation from './pages/localisation/Localisation';
+import Localisation from './pages/localisation/Localisation';
 import Main from './pages/main/main';
 import "bootstrap/dist/css/bootstrap.min.css"
 import NavbarMenu from './components/navbar/Navbar';
 import { Container } from 'react-bootstrap';
 import Error404 from './pages/errors/Error404';
 import Footer from './components/footer/Footer';
-import ContactForm from './pages/contact/ContactForm';
  
 const App: React.FC = () => {
     return ( 
@@ -17,7 +16,7 @@ const App: React.FC = () => {
             <Container>
                 <Switch>
                 <Route path="/" exact component={Main} /> 
-                <Route path="/localisation" exact component={Locali} /> 
+                <Route path="/localisation" exact component={Localisation} /> 
                 <Route path="/contact" component={Contact} /> 
                 <Route component={Error404} /> 
                 </Switch>
