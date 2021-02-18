@@ -11,25 +11,13 @@ export interface HoursProps {
         }>
     }>;
 }
-
-interface Hours {
-    heures: Array<{
-        de: string;
-        a: string; 
-        du: string;
-        au: string;
-    }>
-}
  
 const Hours: React.FC<HoursProps> = ({ horaires }) => {
     console.log(horaires);
     const content = horaires.map((horaire, index)=> {
-        console.log(horaire.heures[0].de);
-        
         return (<> 
             <ul>
-                {/* <li key={index}>Du {horaire.du} au {horaire.au} - De {Horraire.heures[0].de} à {Horraire.heures[0].a} </li>     */}
-                <li>Vendredi - De  </li>    
+                <li key={index}>Du {horaire.du} au {horaire.au} - De {horaire.heures[0].de} à {horaire.heures[0].a}</li>       
             </ul>
         </>);
     })

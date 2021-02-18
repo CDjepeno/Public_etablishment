@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap';
-import Horraire from '../hours/Hours';
+import Hours from '../hours/Hours';
 
 
 export interface EtablishmentProps {
@@ -19,11 +19,7 @@ export interface EtablishmentProps {
             horaires: Array<{
                 du: string;
                 au: string;
-                heures: Array<
-                    // de: string;
-                    // a: string;
-                    any
-                >
+                heures: Array<any>
             }>;
         };
         geometry: any;
@@ -34,18 +30,9 @@ export interface EtablishmentProps {
 const Etablishment: React.FC<EtablishmentProps> = ({ features }) => {
     
     const organization = features.properties;
-    console.log(organization);
     const address = organization.adresses[0];
 
-    // const horraireLunMat = organization.horaires[0].heures[0];
-    // const horraireJeuap = organization.horaires[1].heures[1];
-
-    // const horraireVenmat = organization.horaires[0].heures[0]
-    // const horraireVenap = organization.horaires[0].heures[1]
-
-    // {address.lignes} {address.codePostal} {address.commune}
     return ( <>
-        <h2>Liste des Mairie</h2>
         <Card>
             <Card.Header>{organization.nom}</Card.Header>
             <Card.Body>
@@ -54,12 +41,14 @@ const Etablishment: React.FC<EtablishmentProps> = ({ features }) => {
                     <Card.Title>mail : {organization.mail}</Card.Title>
                 }
                 <Card.Text>
-                Adresse : {address.lignes} {address.codePostal} {address.commune}
+                    Adresse : {address.lignes} {address.codePostal} {address.commune}
                 </Card.Text>
-                <Card.Text>
-                    Horraire :
-                        <Horraire horaires={organization.horaires} />
-                </Card.Text>
+                {organization.horaires &&
+                    <Card.Text>
+                        Horraire :
+                            <Hours horaires={organization.horaires} />
+                    </Card.Text>
+                }
                 {organization.url && 
                     <Button variant="primary" href={organization.url} target="_blank">Visitez le site web</Button>
                 }

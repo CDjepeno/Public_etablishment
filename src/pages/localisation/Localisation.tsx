@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Col, Row } from 'react-bootstrap'
 import Button from '../../components/button/button'
 import Etablishment from '../../components/etablisment/Etablishment'
 import Title from '../../components/title/Title'
@@ -18,7 +19,7 @@ const Localisation: React.FC = () => {
 
     const handleOrganization = (organization: string) => {
         GouvService.getOrganization(organization)
-        .then(data => {            
+        .then(data => {                 
             setOrganizations(data.features);
         })
     }
@@ -28,12 +29,7 @@ const Localisation: React.FC = () => {
         .then(data => {            
             setOrganizations(data.features);
         })
-    }, [])
-
-    console.log(organizations);
-    
-
-    
+    }, [])    
     
     return ( <>
         <div>
@@ -43,17 +39,17 @@ const Localisation: React.FC = () => {
             <Button text="Pôle-emploi" clic={() => handleOrganization("pole_emploi")}/>
             {/* <Button text="Mission locale" clic={() => handleOrganization("mission_locale")}/> */}
         </div>
-        <div className="row">
+        <Row>
             {organizations && organizations.map((organization: any , index:any) => {
                 return( 
-                    <div className="col-6" key={index}>
+                    <Col md={6} key={index}>
                         <Etablishment features={organization} />
-                    </div>
+                    </Col>
                 ) 
             }) 
             }   
              
-        </div>
+        </Row>
     </>);
 }
  
