@@ -5,3 +5,4 @@
 - Utilisation des hooks.
 - Utilisation du router de react.
 - Classification des établissements par catégories.
+- Utilisation de react-bootstrap.
